@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+		}
+		img{
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<img src="../img/num1.png"/>
+		</div>
+		<input type="button" name="" id="" value="shang" />
+		<input type="button" value="xia"/>
+		<p></p>
+	</body>
+	<script type="text/javascript">
+		var img = document.getElementsByTagName('img')[0];
+		var btn = document.getElementsByTagName('input');
+		var p = document.getElementsByTagName('p')[0];
+		var num =1;
+		p.innerHTML = '这是'+num+'图片'
+		btn[0].onclick = function (){
+			num--;
+			if(num == 0){
+				num = 4;
+			}
+			img.src = '../img/num'+num+'.png';
+			p.innerHTML = '这是'+num+'图片'
+		}
+		btn[1].onclick = function (){
+			num++;
+			
+			if(num == 5){
+				num = 1;
+			}
+			img.src = '../img/num'+num+'.png';
+			p.innerHTML = '这是'+num+'图片'
+		}
+	</script>
+</html>
